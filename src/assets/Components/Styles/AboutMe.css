@@ -1,0 +1,137 @@
+.about_container{
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.about_me{
+    margin-top: 1.5em;
+    text-rendering: optimizeLegibility;
+}
+
+.education{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: -150px
+}
+/* DESDE AQUI */
+.education .education_card{
+    position:relative;
+    width: 230px;
+    height: 320px;
+    overflow: hidden;
+    transition: 0.7s;  
+}
+.education .education_card:hover{
+    z-index: 1;
+    transform:scale(1.25);
+    box-shadow: 0 5px 10px -5px rgb(0 0 0/90%);
+}
+.education_card{
+    border-radius: 4px;
+}
+.education .education_card .img_card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.education .education_card .img_card:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(180deg, rgb(0, 115, 255),#000000cb);
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: 0.5s;
+}
+.education .education_card:hover .img_card:before{
+    opacity:1
+}
+.education .education_card .img_card img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.img_card{
+    object-fit: cover;
+}
+.education .education_card .content_card{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display:flex;
+    padding: 20px;
+    align-items: flex-end;
+} 
+.education .education_card .content_card h3{
+    color: #fff;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    transform: translateY(200px);
+}
+.education .education_card:hover .content_card h3{
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+.education .education_card .content_card p{
+    color: #fff;
+    transform: translateY(200px);
+    transition: 0.5s;
+    font-size: 14px;
+}
+.education .education_card:hover .content_card p{
+    transform: translateY(0);
+    transition-delay: 0.7s;
+}
+
+@media screen and (min-width: 720px) {  
+    .about_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about_me{        
+        font-size: 20px;
+        width: 80rem;
+    }
+    .education{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 85rem;
+        height: 35rem;
+    }
+    /* .education_title{
+        border-top: solid 0.5px;
+        text-align: center;  
+        font-size: 35px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+
+    }    */
+    .education .education_card{
+        position:relative;
+        width: 350px;
+        height: 440px;
+        overflow: hidden;
+        transition: 0.5s;   
+    }
+}
