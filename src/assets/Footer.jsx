@@ -18,7 +18,6 @@ const Footer = () => {
         <NavLink className="footer_link"  to="/Habilities">Habilities</NavLink>
         <NavLink className="footer_link"  to="/MyProyects">My projects</NavLink>
         <NavLink className="footer_link"  to="/ContactMe">Contact me</NavLink>
-        <NavLink className="footer_link"  to="/ContactMe">Download my portafolio</NavLink>
         </div>
       <div className="box_footer_social">
         <h3>Social</h3>
@@ -39,10 +38,6 @@ const Footer = () => {
         </a>
       </div>
       </div>
-      <div className="box_copyright">
-        <hr></hr>
-      <p>Todos los derechos reservados © 2023</p><b>JMonterrosa</b>
-        </div>
       </footer>
   )
 }

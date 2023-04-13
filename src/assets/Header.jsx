@@ -34,8 +34,12 @@ const Header = () => {
             <li>
           <NavLink className="link" to="/ContactMe">Contact Me</NavLink>
             </li>
-        </ul>
-          <NavLink className=' link action_btn' to="/">Descarga mi CV</NavLink>
+    </ul>
+        {/* <label>
+          <input type="checkbox" />
+          <span className='check'></span>
+        </label> */}
+          <NavLink className='link action_btn' to="/">Descarga mi CV</NavLink>
           <div className="toggle_btn">
           <i onClick={handleHamClick} className="fa-solid fa-bars"></i>      
           </div>
@@ -57,18 +61,13 @@ const Header = () => {
           <NavLink className="link" to="/ContactMe">Contact Me</NavLink>
             </li>
             <li>
-            <NavLink className=' link action_btn' to="/">Descarga mi CV</NavLink>
+          <NavLink className='action_btn' to="/">Descarga mi CV</NavLink>
             </li>
             </ul>
+            
           </div>
   </div>
 </header>
-
-        // <label>
-        //   <input type="checkbox" />
-        //   <span className='check'></span>
-        // </label>
-      
   )
 }
 
