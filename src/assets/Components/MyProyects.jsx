@@ -1,10 +1,11 @@
 import React from 'react'
+import './Styles/MyProyects.css'
 
 const MyProyects = () => {
   return (
-    <div>
-       <section class="proyects">
-    <div class="proyects_title">
+    <div className='proyect_container'>
+       <section className="proyects">
+    <div className="proyects_title">
       <h2>Proyectos</h2>
     </div>
       <div>

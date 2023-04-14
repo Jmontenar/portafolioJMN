@@ -5,7 +5,11 @@ import  Picture from'../img/JM.png'
 const Home = () => {
   return (
     <div className='presentation'>
-      <img src={Picture} alt="Picture" />
+      <div className="big_containgerimg">
+      <div className="img_container">
+        <img src={Picture} alt="Picture" />
+      </div>
+      </div>
       <div className="presentation__Hi">
           <h1>Jorge Monterrosa Narváez</h1>
       </div>

@@ -14,6 +14,7 @@ li{
   background-position: -100%;
   display: inline-block;
   padding: 5px 0;
+  font-weight: bold;
   position: relative;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -55,6 +56,9 @@ header{
     border-radius: 50%;
     margin-top: 1px;
 }
+.logo:hover{
+    scale: 1.1;
+}
 .navbar{
     width: 100%;
     height: 60px;
@@ -82,9 +86,11 @@ header{
     font-size: 0.8rem;
     font-weight: bold;
     transition: scale .2 ease;
+    margin-right: 20px;
+    text-decoration: none;
 }
 .action_btn:hover{
-    scale: 1.05;
+    scale: 1.1;
     color: #fff;
 }
 .dropdown_menu{

@@ -19,6 +19,10 @@ footer{
     width: auto;
     align-items: center;
 }
+.box_footer_img img:hover{
+    scale: 1.1;
+    color: #fff;
+}
 .box_footer_img img{
     width: 3.5rem;
     height: 3.5rem;

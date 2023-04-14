@@ -39,7 +39,7 @@ const Header = () => {
           <input type="checkbox" />
           <span className='check'></span>
         </label> */}
-          <NavLink className='link action_btn' to="/">Descarga mi CV</NavLink>
+          <NavLink className='action_btn' to="/">Descarga mi CV</NavLink>
           <div className="toggle_btn">
           <i onClick={handleHamClick} className="fa-solid fa-bars"></i>      
           </div>
