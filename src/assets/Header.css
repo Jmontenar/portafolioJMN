@@ -14,11 +14,22 @@ li{
   background-position: -100%;
   display: inline-block;
   padding: 5px 0;
+  text-transform: uppercase;
   font-weight: bold;
   position: relative;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
+}
+/*COLORS DAY THEME*/
+:root{
+    --letters: #ff7431;
+    --backgroud_blue: rgba(88, 156, 170)
+}
+/*COLOR NIGTH MODE*/
+:root{
+    --letters: #ff7431;
+    --backgroud_blue: rgba(88, 156, 170)
 }
 .link:before{
     content: '';
@@ -48,7 +59,7 @@ header{
     box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.75);
-    background-color: rgb(88,156,170);
+background: rgba(88, 156, 170, 0.996)
 }
 .logo img{
     width: 3.7em;
@@ -77,7 +88,7 @@ header{
     display: none;
 }
 .action_btn{
-    background-color: orangered;
+    background-color: #ff7431;
     color: whitesmoke;
     padding: 0.5rem 1rem;
     /* border: none;
@@ -88,6 +99,7 @@ header{
     transition: scale .2 ease;
     margin-right: 20px;
     text-decoration: none;
+    text-transform: uppercase
 }
 .action_btn:hover{
     scale: 1.1;
@@ -99,7 +111,7 @@ header{
     top: 60px;
     height: 0;
     width: 400px;
-    background: rgba(82, 7, 211, 0.1);
+    background: rgb(88,156,170,0.1);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -122,8 +134,6 @@ header{
     justify-content: center;
     border: solid
 }
-
-
 @media(max-width: 992px){
     .navbar .links,
     .navbar .action_btn{
@@ -136,7 +146,7 @@ header{
         display: block;
     }
     .action_btn{
-        background-color: orangered;
+        background-color: #ff7431;
         color: whitesmoke;
         padding: 0.5rem 1rem;
         /* border: none;
@@ -147,16 +157,13 @@ header{
         transition: scale .2 ease;
     }
 }
-
-
-
 @media(max-width: 576px){
     .dropdown_menu{
         left: 0.5rem;
         width: unset;
     }
     .action_btn{
-        background-color: orangered;
+        background-color: #ff7431;
         color: whitesmoke;
         padding: 0.5rem 1rem;
         /* border: none;
@@ -166,62 +173,4 @@ header{
         font-weight: bold;
         transition: scale .2 ease;
     }
-}
-
-
-
-
-
-input[type="checkbox"]{
-    appearance: none;
-    visibility: hidden;
-    display: none;
-}
-.check{
-    position: relative;
-    display: block;
-    width: 40px;
-    height: 20px;
-    background: #092c3e;
-    cursor: pointer;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: ease-in 0.5s;
-    transform: translateY(-220px);
-    margin-left: -150px
-}
-
-
-input[type="checkbox"]:checked  ~ .check{
-    background: #fff;
-    box-shadow: 0 0 0 1200px #092c3e;
-}
-.check:before{
-    content: '';
-    position:absolute;
-    top: 2px;
-    left: 2px;
-    background: #fff;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-input[type="checkbox"]:checked  ~ .check:before{
-    transform: translateX(-50px);
-}
-.check:after{
-    content: '';
-    position:absolute;
-    top: 2px;
-    left: 2px;
-    background: #092c3e;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    transition: 0.5s;
-    transform: translateX(50px)
-}
-input[type="checkbox"]:checked  ~ .check:after{
-    transform: translateX(0px);
 }

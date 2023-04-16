@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Styles/Home.css'
 import  Picture from'../img/JM.png'
+import Loading from './Loading'
 
 const Home = () => {
+  const [isLoading, setisLoading] = useState(true)
+  useEffect(() => {
+    setisLoading(false)
+    }, [])
+
+if(isLoading){
+  return <Loading />
+  }else{
   return (
     <div className='presentation'>
       <div className="big_containgerimg">
@@ -19,5 +28,5 @@ const Home = () => {
     </div>
   )
 }
-
+}
 export default Home

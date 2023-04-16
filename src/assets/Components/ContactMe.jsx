@@ -1,7 +1,7 @@
-import React from 'react'
-import {useForm} from 'react-hook-form'
+import React, { useEffect, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import './Styles/ContactMe.css'
+import Loading from './Loading'
 
 const ContactMe = () => {
 
@@ -11,6 +11,14 @@ const ContactMe = () => {
     .then(res =>console.log(res))
     .catch(err =>console.log(err))
   }
+  const [isLoading, setisLoading] = useState(true)
+  useEffect(() => {
+    setisLoading(false)
+    }, [])
+
+if(isLoading){
+  return <Loading />
+  }else{
   return (
     <div className='form_container'>
       <form className='form' onSubmit={sendEmail}>
@@ -55,5 +63,5 @@ const ContactMe = () => {
     
   )
 }
-
+}
 export default ContactMe

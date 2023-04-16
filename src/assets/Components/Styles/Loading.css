@@ -1,0 +1,28 @@
+body .loading_container{
+    background: #fff;
+}
+.loading_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.loading_logo{
+    margin-top: 90px;
+    width: 31.5rem;
+    animation: rotar 5s linear infinite;
+}
+.loading_logo img{
+    border-radius: 50%;
+}
+@keyframes rotar{
+    100%{transform: rotateY(360deg)}
+}
+.loading_logo h1:before{
+    content: '';
+    animation: changingTxt 8s linear infinite;
+}
+@keyframes changingTxt{
+    100%{content: 'Loading Portafolio'}
+}

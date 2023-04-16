@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Styles/Habilities.css'
 import CSS from '../img/css.png'
 import HTML from '../img/logohtml.png'
 import JS from '../img/JS.png' 
 import REACT from '../img/react_logo.png'
 import NODE from '../img/nodeJS.png' 
+import Loading from './Loading'
 
 const Habilities = () => {
+  const [isLoading, setisLoading] = useState(true)
+  useEffect(() => {
+    setisLoading(false)
+    }, [])
+
+if(isLoading){
+  return <Loading />
+  }else{
   return (
     <div className='habilities_container'>
         <div className="skills_title">
@@ -79,9 +88,9 @@ const Habilities = () => {
           </div>
          </div>
         </div>
-  
     </div>
   )
+}
 }
 
 export default Habilities

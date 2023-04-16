@@ -35,10 +35,6 @@ const Header = () => {
           <NavLink className="link" to="/ContactMe">Contact Me</NavLink>
             </li>
     </ul>
-        {/* <label>
-          <input type="checkbox" />
-          <span className='check'></span>
-        </label> */}
           <NavLink className='action_btn' to="/">Descarga mi CV</NavLink>
           <div className="toggle_btn">
           <i onClick={handleHamClick} className="fa-solid fa-bars"></i>      
