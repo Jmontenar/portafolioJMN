@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Styles/MyProyects.css'
 import RickAndMorty from '../img/RickAndMorty.png'
+import RandomCuote from '../img/RandomCoutes.png'
 import Loading from './Loading'
 
 const MyProyects = () => {
@@ -30,10 +31,21 @@ if(isLoading){
             </div>
           </div>
 
+          <div className="proyects_card">
+      <div className="img_card">
+        <img src={RandomCuote} alt="RandomCuote" />
+      </div>
+        <div className="proyect_content_card">
+          <div>
+            <h3>Aplicación Random Cuote</h3>
+            <p>Aplicativo desarrollado con el frameworkk React JS, el cual consta en realizar consultas a una API utilizando axios, implementanto un buscador por cada universo disponible según la serie y una paginación para organizar los personajes.</p>
+          </div>
+            </div>
+          </div>
+
         <ul>
           <li>Ecomerce</li>
           <li>Poke Api</li>
-          <li>Random Coutes / Random Color</li>
         </ul>
     </div>
     </div>

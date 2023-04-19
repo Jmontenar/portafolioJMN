@@ -13,7 +13,10 @@
 }
 .proyects{
     border: solid 0.5px red;  
-    width: 85rem; 
+    /* width: 85rem;  */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
 }
 .img_card img{
     width: 30rem;

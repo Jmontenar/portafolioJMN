@@ -11,6 +11,10 @@ const ContactMe = () => {
     .then(res =>console.log(res))
     .catch(err =>console.log(err))
   }
+  const [Show, setShow] = useState(false);
+  const toggle = () =>{
+    setShow(!Show)
+  }
   const [isLoading, setisLoading] = useState(true)
   useEffect(() => {
     setisLoading(false)
@@ -20,6 +24,7 @@ if(isLoading){
   return <Loading />
   }else{
   return (
+  <>
     <div className='form_container'>
       <form className='form' onSubmit={sendEmail}>
         <h3 className='form_tittle'>ContactMe</h3>
@@ -37,30 +42,25 @@ if(isLoading){
           <div className="form_group">
             <textarea className='form_input' name="user_message" id="" cols="48" rows="20"></textarea>
             <label className='form_label'>Mensaje</label>
-              <div className="btn_modal">
-                <label htmlFor="btn-modal">
-                  ACTIVAR
-              <input type='submit' className='form_submit' value='Enviar'></input>
-                </label>
-              </div>
-              <input type="checkbox" id="btn-modal" />
-              <div className="container-modal">
-                <div className="content-modal">
-                  <h1>Su e-mail ha sido envíado!</h1>
-                  <p>En breve estaremos en contacto</p>
-                  <div className="btn-cerrar">
-                  <label htmlFor="btn-modal">Cerrar</label>
-                </div>
-                </div>
-                
-              </div>
-
+              <input type='submit' className='form_submit' value='Enviar' onClick={toggle}></input>
           </div>
-        
         </div>
       </form>
       </div>
-    
+        <div className={`modal ${Show && "Show"}`} onClick={toggle}>
+          <div className="modal-content">  
+          <div className="modal-body">
+            <div className="message">
+              <h3>Su mensaje ha sido enviado!</h3>
+              <p>Dentro de poco estaremos en contacto</p>
+            </div>
+            <div className="button-container">
+            <button className='modal-button' onClick={(e)=> e.stopPropagation}>Cerrar</button>
+            </div>
+          </div>
+          </div>
+        </div>
+  </>
   )
 }
 }

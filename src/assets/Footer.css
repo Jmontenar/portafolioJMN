@@ -102,7 +102,7 @@ footer{
     flex-direction: column;
     width: 400px;
     align-items: center;
-    /* display: none */
+    margin-bottom: 15px;
 }
 .box_footer_img img{
     width: 3.5rem;
